@@ -26,7 +26,7 @@ public class Midlet extends MIDlet implements CommandListener{
     public void startApp() {
      
         entreeList = new List("Select an entree", List.EXCLUSIVE);
-        for(int i=0;i<3;i++){
+        for(int i=0;i<restaurants.length;i++){
             entreeList.append(restaurants[i], null);
         }      
         
