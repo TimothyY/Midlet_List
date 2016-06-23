@@ -5,6 +5,7 @@
 package hello;
 
 import javax.microedition.lcdui.Alert;
+import javax.microedition.lcdui.AlertType;
 import javax.microedition.lcdui.Command;
 import javax.microedition.lcdui.CommandListener;
 import javax.microedition.lcdui.Display;
@@ -58,7 +59,9 @@ public class Midlet extends MIDlet implements CommandListener{
     
     private Alert createAlert(int i) {
         Alert mAlert = new Alert(restaurants[i]);
-        mAlert.setTimeout(Alert.FOREVER);
+        mAlert.setString("enjoy your food in "+restaurants[i]);
+        mAlert.setTimeout(10000);
+        mAlert.setType(AlertType.INFO); //optional
         return mAlert;
     }
 }
